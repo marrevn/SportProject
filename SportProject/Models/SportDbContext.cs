@@ -212,7 +212,7 @@ public partial class SportDbContext : DbContext
             entity.Property(e => e.Login).HasColumnName("login");
             entity.Property(e => e.PasswordUser).HasColumnName("password_user");
 
-            entity.HasOne(d => d.IdRoleNavigation).WithMany(p => p.Users)
+            entity.HasOne(d => d.Role).WithMany(p => p.Users)
                 .HasForeignKey(d => d.IdRole)
                 .HasConstraintName("fk_users_to_roles");
         });
