@@ -13,7 +13,7 @@ public partial class OrdersComposition
 
     public int Quantity { get; set; }
 
-    public virtual Tovar IdArticleNavigation { get; set; } = null!;
+    public virtual Tovar Tovar { get; set; } = null!;
 
-    public virtual Order IdOrderNavigation { get; set; } = null!;
+    public virtual Order Order { get; set; } = null!;
 }

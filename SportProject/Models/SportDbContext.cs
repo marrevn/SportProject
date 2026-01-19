@@ -88,11 +88,11 @@ public partial class SportDbContext : DbContext
             entity.Property(e => e.IdStatus).HasColumnName("id_status");
             entity.Property(e => e.IdUser).HasColumnName("id_user");
 
-            entity.HasOne(d => d.IdStatusNavigation).WithMany(p => p.Orders)
+            entity.HasOne(d => d.Status).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.IdStatus)
                 .HasConstraintName("fk_orders_to_statuses");
 
-            entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.Orders)
+            entity.HasOne(d => d.User).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.IdUser)
                 .HasConstraintName("fk_orders_to_users");
         });
@@ -108,11 +108,11 @@ public partial class SportDbContext : DbContext
             entity.Property(e => e.IdOrder).HasColumnName("id_order");
             entity.Property(e => e.Quantity).HasColumnName("quantity");
 
-            entity.HasOne(d => d.IdArticleNavigation).WithMany(p => p.OrdersCompositions)
+            entity.HasOne(d => d.Tovar).WithMany(p => p.OrdersCompositions)
                 .HasForeignKey(d => d.IdArticle)
                 .HasConstraintName("fk_orders_composition_to_tovars");
 
-            entity.HasOne(d => d.IdOrderNavigation).WithMany(p => p.OrdersCompositions)
+            entity.HasOne(d => d.Order).WithMany(p => p.OrdersCompositions)
                 .HasForeignKey(d => d.IdOrder)
                 .HasConstraintName("fk_orders_composition_to_orders");
         });
