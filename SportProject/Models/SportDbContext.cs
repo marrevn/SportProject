@@ -181,19 +181,19 @@ public partial class SportDbContext : DbContext
                 .HasColumnName("price");
             entity.Property(e => e.Unit).HasColumnName("unit");
 
-            entity.HasOne(d => d.IdCategoryNavigation).WithMany(p => p.Tovars)
+            entity.HasOne(d => d.Category).WithMany(p => p.Tovars)
                 .HasForeignKey(d => d.IdCategory)
                 .HasConstraintName("fk_tovars_to_categories");
 
-            entity.HasOne(d => d.IdManufacturerNavigation).WithMany(p => p.Tovars)
+            entity.HasOne(d => d.Manufacturer).WithMany(p => p.Tovars)
                 .HasForeignKey(d => d.IdManufacturer)
                 .HasConstraintName("fk_tovars_to_manufacturers");
 
-            entity.HasOne(d => d.IdSupplierNavigation).WithMany(p => p.Tovars)
+            entity.HasOne(d => d.Supplier).WithMany(p => p.Tovars)
                 .HasForeignKey(d => d.IdSupplier)
                 .HasConstraintName("fk_tovars_to_suppliers");
 
-            entity.HasOne(d => d.IdTovarNavigation).WithMany(p => p.Tovars)
+            entity.HasOne(d => d.Good).WithMany(p => p.Tovars)
                 .HasForeignKey(d => d.IdTovar)
                 .HasConstraintName("fk_tovars_to_goods");
         });
