@@ -14,4 +14,6 @@ public partial class PickupPoint
     public string NumberHouse { get; set; } = null!;
 
     public string NumberPhone { get; set; } = null!;
+
+    public string DeliveryAddress => $"{City} {Street} {NumberHouse} ";
 }

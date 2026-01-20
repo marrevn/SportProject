@@ -107,6 +107,11 @@ public partial class SportDbContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.IdUser)
                 .HasConstraintName("fk_orders_to_users");
+
+            entity.HasOne(d => d.PickupPoint)
+    .WithMany()
+    .HasForeignKey(d => d.IdPickupPoint)
+    .HasConstraintName("fk_orders_to_pickup_points");
         });
 
         modelBuilder.Entity<OrdersComposition>(entity =>

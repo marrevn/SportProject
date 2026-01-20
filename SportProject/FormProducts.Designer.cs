@@ -46,7 +46,7 @@
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(10, 10);
             panelTop.Name = "panelTop";
-            panelTop.Padding = new Padding(0, 0, 0, 10);
+            panelTop.Padding = new Padding(10, 0, 10, 10);
             panelTop.Size = new Size(964, 40);
             panelTop.TabIndex = 0;
             // 
@@ -56,7 +56,7 @@
             btnBack.Dock = DockStyle.Left;
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(0, 0);
+            btnBack.Location = new Point(10, 0);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(150, 30);
             btnBack.TabIndex = 7;
@@ -68,7 +68,7 @@
             // 
             lblUserName.AutoSize = true;
             lblUserName.Dock = DockStyle.Right;
-            lblUserName.Location = new Point(769, 0);
+            lblUserName.Location = new Point(759, 0);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(45, 19);
             lblUserName.TabIndex = 6;
@@ -81,7 +81,7 @@
             btnLogut.Dock = DockStyle.Right;
             btnLogut.FlatStyle = FlatStyle.Flat;
             btnLogut.ForeColor = Color.White;
-            btnLogut.Location = new Point(814, 0);
+            btnLogut.Location = new Point(804, 0);
             btnLogut.Name = "btnLogut";
             btnLogut.Size = new Size(150, 30);
             btnLogut.TabIndex = 5;

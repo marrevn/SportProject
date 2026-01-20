@@ -38,12 +38,12 @@ namespace SportProject
 
         private void BtnOrders_Click_1(object sender, EventArgs e)
         {
-            //this.Hide();
-            //using (var formOrders = new FormOrders(CurrentUser))
-            //{
-            //    formOrders.ShowDialog();
-            //    this.Show();
-            //}
+            this.Hide();
+            using (var formOrders = new FormOrders(CurrentUser))
+            {
+                formOrders.ShowDialog();
+                this.Show();
+            }
         }
 
         private void BtnBack_Click_1(object sender, EventArgs e)

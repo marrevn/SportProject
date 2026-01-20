@@ -22,6 +22,7 @@ public partial class Order
     public virtual Status Status { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;
+    public virtual PickupPoint PickupPoint { get; set; } = null!; 
 
     public virtual ICollection<OrdersComposition> OrdersCompositions { get; set; } = new List<OrdersComposition>();
 }

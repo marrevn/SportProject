@@ -145,6 +145,7 @@
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(4);
             Name = "FormMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Меню";
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
