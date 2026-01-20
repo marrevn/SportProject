@@ -17,17 +17,21 @@ public partial class Tovar
 
     public decimal Price { get; set; }
 
-    public string Unit { get; set; } = null!;
-
     public int Discount { get; set; }
 
     public int CountTovars { get; set; }
 
     public string Descreption { get; set; } = null!;
 
+    public string? PhotoUrl { get; set; }
+
+    public int? IdMeasure { get; set; }
+
     public virtual Category Category { get; set; } = null!;
 
     public virtual Manufacturer Manufacturer { get; set; } = null!;
+
+    public virtual Measure? Measure { get; set; }
 
     public virtual Supplier Supplier { get; set; } = null!;
 

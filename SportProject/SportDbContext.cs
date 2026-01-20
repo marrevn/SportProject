@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using SportProject.Models;
 
-namespace SportProject.Models;
+namespace SportProject;
 
 public partial class SportDbContext : DbContext
 {
