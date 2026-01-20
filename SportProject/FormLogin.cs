@@ -6,7 +6,7 @@ namespace SportProject
     public partial class FormLogin : Form
     {
         public User CurrentUser { get; private set; }
-        public bool isGuest { get; private set; }
+        public bool IsGuest { get; private set; }
         public FormLogin()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace SportProject
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            using (var db = new SportDbContext())
+            using (var db = new Models.SportDbContext())
             {
                 var user = db.Users
                     .Where(w => w.Login == txtLogin.Text && w.PasswordUser == txtPassword.Text)
@@ -28,7 +28,7 @@ namespace SportProject
                 if (user != null)
                 {
                     CurrentUser = user;
-                    isGuest = false;
+                    IsGuest = false;
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
@@ -45,7 +45,7 @@ namespace SportProject
         private void BtnGuest_Click(object sender, EventArgs e)
         {
             CurrentUser = null;
-            isGuest = true;
+            IsGuest = true;
             this.DialogResult=DialogResult.OK;
             this.Close();
 

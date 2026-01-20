@@ -65,6 +65,7 @@ namespace SportProject
                         .Include(i => i.Manufacturer)
                         .Include(i => i.Supplier)
                         .Include(i => i.Measure)
+                        .Include(i => i.Good)
                         .ToList();
 
                     dgvProducts.SuspendLayout();
@@ -97,6 +98,8 @@ namespace SportProject
 
                         ApplyRowStyles(row, product);
                     }
+                    dgvProducts.ResumeLayout();
+                    dgvProducts.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
                 }
             }
             catch (Exception ex)
