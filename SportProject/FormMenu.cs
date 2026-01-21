@@ -53,7 +53,8 @@ namespace SportProject
 
         private void BtnLogut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

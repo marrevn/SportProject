@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SportProject.Models;
 using SportProject.Properties;
+using System.Diagnostics;
 
 namespace SportProject
 {
@@ -160,14 +161,20 @@ namespace SportProject
 
         private Image LoadProductImage(string photoUrl)
         {
-            if (!String.IsNullOrEmpty(photoUrl) && System.IO.File.Exists(photoUrl))
+            if (!String.IsNullOrEmpty(photoUrl))
             {
-                return Image.FromFile(photoUrl);
+                object obj = Resources.ResourceManager.GetObject(photoUrl);
+
+                if (obj != null)
+                {
+                    return (Image)obj;
+                }
             }
 
             return Resources.picture;
 
         }
+
 
         private void BtnLogut_Click(object sender, EventArgs e)
         {
